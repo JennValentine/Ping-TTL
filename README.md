@@ -11,7 +11,7 @@ host basándose en el valor de TTL (Time To Live) del resultado del ping.
 ```bash
 cd /opt
 sudo rm -rf Ping-TTL
-sudo git clone https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Ping-TTL
+sudo git clone https://github.com/JennValentine/Ping-TTL
 sudo chmod +x Ping-TTL/*
 cd Ping-TTL
 ```
