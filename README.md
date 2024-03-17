@@ -58,4 +58,4 @@ de TTL puede variar y no garantiza la identificación precisa del sistema
 operativo.
 
 ## :octocat: Créditos
-1. [JennValentine](https://t.me/JennValentine) - Developer of Ping-TTL 
+1. [Jenn Valentine](https://t.me/JennValentine) - Developer of Ping-TTL 
