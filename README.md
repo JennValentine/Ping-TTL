@@ -21,16 +21,8 @@ cd Ping-TTL
 cd
 echo "cd /opt/pttl.sh && sudo ./pttl.sh.sh" > pttl 
 sudo chmod +x pttl
-sudo mv pttl /usr/local/bin/pttl
-cd
-```
-
-## :book: Acceso directo (En caso de error)
-```bash
-sudo cp pttl.sh pttl_$RANDOM.sh
-sudo mv pttl.sh pttl
 sudo rm -rf /usr/bin/pttl
-sudo mv pttl /usr/bin/pttl
+sudo mv pttl /usr/local/bin/pttl
 cd
 ```
 
