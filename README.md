@@ -1,4 +1,4 @@
-﻿![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Ping-TTL/blob/main/Imagenes/Ping-TTL.jpg)
+﻿![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/Ping-TTL.jpg)
 
 # Ping-TTL
 
@@ -6,8 +6,6 @@
 Este script Bash se encarga de realizar un ping a un host proporcionado 
 como argumento y extraer información sobre el sistema operativo del 
 host basándose en el valor de TTL (Time To Live) del resultado del ping. 
-
-* Donaciones por [PayPal](https://paypal.me/jonyriverasepulveda)
 
 ## :book: Instalacion
 ```bash
@@ -68,7 +66,4 @@ de TTL puede variar y no garantiza la identificación precisa del sistema
 operativo.
 
 ## :octocat: Créditos
-1. [Jony Rivera](#) - Developer of Ping-TTL 
-```
-☆ https://t.me/AAAAAEXQOSyIpN2JZ0ehUQ [  ⃘⃤꙰✰ ] ☆
-```
+1. [JennValentine](https://t.me/JennValentine) - Developer of Ping-TTL 
