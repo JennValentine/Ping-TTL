@@ -25,6 +25,16 @@ sudo mv pttl /usr/local/bin/
 cd
 ```
 
+## :book: Acceso directo (En caso de error)
+```bash
+cd
+echo "cd /opt/Ping-TTL && sudo ./pttl.sh" > pttl
+sudo chmod +x pttl
+sudo rm -rf /usr/local/bin/pttl
+sudo mv pttl /usr/local/bin/pttl
+cd
+```
+
 ## Modo de Uso
 
 Ejecutar el script con una dirección IP:
