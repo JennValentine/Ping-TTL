@@ -19,7 +19,7 @@ cd Ping-TTL
 ## :book: Acceso directo
 ```bash
 cd
-echo "cd /opt/pttl.sh && sudo ./pttl.sh.sh" > pttl 
+echo "cd /opt/pttl.sh && sudo ./pttl.sh" > pttl 
 sudo chmod +x pttl
 sudo rm -rf /usr/bin/pttl
 sudo mv pttl /usr/local/bin/pttl
