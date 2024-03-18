@@ -3,7 +3,7 @@
 # Obtiene el valor de TTL del resultado de ping al host en $1
 ttl=$(timeout 4 bash -c "ping -c1 $1 | grep -oP 'ttl=\d{1,3}' | cut -d '=' -f 2" 2>/dev/null)
 
-# FunciÛn para determinar el sistema operativo en funciÛn del valor de TTL
+# Funci√≥n para determinar el sistema operativo en funci√≥n del valor de TTL
 function tipe_ttl ()
 {
     ip=$1
@@ -40,14 +40,14 @@ function tipe_ttl ()
     exit 0
 }
 
-# Comprobar si se proporcionÛ un ˙nico argumento
+# Comprobar si se proporcion√≥ un √∫nico argumento
 if [ $# -eq 1 ]; then
-    # Verificar si el comando ping tuvo Èxito y el valor de TTL es v·lido
+    # Verificar si el comando ping tuvo √©xito y el valor de TTL es v√°lido
     if [ $? -eq 0 -a $ttl -le 512 -a $ttl -ge 1 ] 2>/dev/null; then
         tipe_ttl $1 $ttl
     fi
-    echo -e "\n\033[1;31m[-] ERROR, coloque un par·metro v·lido"
-    echo -e "\033[1;31m    o verifique si el host est· activo!\n"
+    echo -e "\n\033[1;31m[-] ERROR, coloque un par√°metro v√°lido"
+    echo -e "\033[1;31m    o verifique si el host est√° activo!\n"
     exit 1
 else
     echo -e "\n\033[01;33m[*] EL modo de uso es:\n"
@@ -57,3 +57,4 @@ else
 fi
 
 # Fin del script
+

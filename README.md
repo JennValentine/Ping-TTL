@@ -1,50 +1,60 @@
-![logo](https://github.com/JennValentine/Kali-Linux-Drivertools/blob/main/Imagenes/Kali-Linux-Drivertools.png)
+﻿![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/Ping-TTL.jpg)
 
-# Kali linux - drivers and tools checker 
-**Kali-Linux-Drivertools**
+# Ping-TTL
 
 ## Descripción
-El script es un instalador y verificador de herramientas y controladores 
-en un sistema Kali Linux, especialmente orientado a la configuración de 
-herramientas y controladores relacionados con la manipulación y análisis 
-de redes inalámbricas. 
+Este script Bash se encarga de realizar un ping a un host proporcionado 
+como argumento y extraer información sobre el sistema operativo del 
+host basándose en el valor de TTL (Time To Live) del resultado del ping. 
 
 ## :book: Instalacion
 ```bash
 cd /opt
-sudo rm -rf Kali-Linux-Drivertools
-sudo git clone https://github.com/JennValentine/Kali-Linux-Drivertools
-sudo chmod +x Kali-Linux-Drivertools/*
-cd Kali-Linux-Drivertools
+sudo rm -rf Ping-TTL
+sudo git clone https://github.com/JennValentine/Ping-TTL
+sudo chmod +x Ping-TTL/*
+cd Ping-TTL
 ```
 
 ## :book: Acceso directo
 ```bash
-cd
-echo "cd /opt/kalilinuxdrivertools && sudo ./kalilinuxdrivertools.sh" > kalilinuxdrivertools 
-sudo chmod +x kalilinuxdrivertools
-sudo rm -rf /usr/bin/kalilinuxdrivertools
-sudo mv kalilinuxdrivertools /usr/local/bin/kalilinuxdrivertools
-cd
-```
-
-## :book: Acceso directo (En caso de error)
-```bash
-sudo cp kalilinuxdrivertools.sh kalilinuxdrivertools_$RANDOM.sh
-sudo mv kalilinuxdrivertools.sh kalilinuxdrivertools
-sudo rm -rf /usr/bin/kalilinuxdrivertools
-sudo mv kalilinuxdrivertools /usr/bin/kalilinuxdrivertools
+sudo cp pttl.sh pttl_$RANDOM.sh
+sudo cp pttl.sh pttl
+sudo rm -rf /usr/local/bin/pttl
+sudo mv pttl /usr/local/bin/
 cd
 ```
 
 ## Modo de Uso
 
-Ejecuta el script con privilegios de administrador:
+Ejecutar el script con una dirección IP:
 
 ```bash
-sudo kalilinuxdrivertools
+pttl 8.8.8.8
 ```
-DATA: Sigue las instrucciones del script para instalar o actualizar herramientas y controladores.
+Esto enviará un paquete de ping a la dirección IP 8.8.8.8 y tratará de 
+determinar el sistema operativo basándose en el valor de TTL.
+
+Ejecutar el script con un nombre de dominio:
+
+```bash
+pttl google.com
+```
+Similar al primer ejemplo, pero usando un nombre de dominio 
+(google.com en este caso).
+
+Ejecutar el script sin argumentos (para ver el modo de uso):
+
+```bash
+pttl
+```
+Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
+
+DATA: Este script es una herramienta simple que proporciona una estimación 
+del sistema operativo basándose en el TTL del ping. Ten en cuenta que 
+esta estimación puede no ser precisa en todos los casos, ya que el valor 
+de TTL puede variar y no garantiza la identificación precisa del sistema 
+operativo.
 
 ## :octocat: Créditos
-1. [Jenn Valentine](https://t.me/JennValentine) - Developer of Kali-Linux-Drivertools 
+1. [Jenn Valentine](https://t.me/JennValentine) - Update Contributor
