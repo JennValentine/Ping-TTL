@@ -2,14 +2,12 @@
 
 # Ping-TTL
 
-## Descripción
+## :bar_chart: Descripción
 Este script Bash se encarga de realizar un ping a un host proporcionado 
 como argumento y extraer información sobre el sistema operativo del 
 host basándose en el valor de TTL (Time To Live) del resultado del ping. 
 
-<center>
-<h2> â¬‡ï¸ Instalacion</h2> 
-</center>
+## :arrow_down: Instalacion
 ```bash
 cd /opt
 sudo rm -rf Ping-TTL
@@ -20,15 +18,6 @@ cd Ping-TTL
 
 ## :book: Acceso directo
 ```bash
-sudo cp pttl.sh pttl_$RANDOM.sh
-sudo cp pttl.sh pttl
-sudo rm -rf /usr/local/bin/pttl
-sudo mv pttl /usr/local/bin/
-cd
-```
-
-## :book: Acceso directo (En caso de error)
-```bash
 cd
 echo "cd /opt/Ping-TTL && sudo ./pttl.sh" > pttl
 sudo chmod +x pttl
@@ -37,7 +26,16 @@ sudo mv pttl /usr/local/bin/
 cd
 ```
 
-## Modo de Uso
+## :book: Acceso directo (En caso de error)
+```bash
+sudo cp pttl.sh pttl_$RANDOM.sh
+sudo cp pttl.sh pttl
+sudo rm -rf /usr/local/bin/pttl
+sudo mv pttl /usr/local/bin/
+cd
+```
+
+## :hammer: Modo de Uso
 
 Ejecutar el script con una dirección IP:
 
