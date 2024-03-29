@@ -7,7 +7,9 @@ Este script Bash se encarga de realizar un ping a un host proporcionado
 como argumento y extraer información sobre el sistema operativo del 
 host basándose en el valor de TTL (Time To Live) del resultado del ping. 
 
-## :book: Instalacion
+<center>
+<h2> â¬‡ï¸ Instalacion</h2> 
+</center>
 ```bash
 cd /opt
 sudo rm -rf Ping-TTL
