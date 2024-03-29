@@ -60,7 +60,7 @@ pttl
 ```
 Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
 
-DATA: Este script es una herramienta simple que proporciona una estimación 
+:books: DATA: Este script es una herramienta simple que proporciona una estimación 
 del sistema operativo basándose en el TTL del ping. Ten en cuenta que 
 esta estimación puede no ser precisa en todos los casos, ya que el valor 
 de TTL puede variar y no garantiza la identificación precisa del sistema 
