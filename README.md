@@ -13,6 +13,8 @@ cd /opt
 sudo rm -rf Ping-TTL
 sudo git clone https://github.com/JennValentine/Ping-TTL
 sudo chmod +x Ping-TTL/*
+cd Ping-TTL
+ls -lthas
 ```
 
 ## :book: Acceso directo
