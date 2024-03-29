@@ -14,6 +14,7 @@ sudo rm -rf Ping-TTL
 sudo git clone https://github.com/JennValentine/Ping-TTL
 sudo chmod +x Ping-TTL/*
 cd Ping-TTL
+ls -lthas
 ```
 
 ## :book: Acceso directo
@@ -55,7 +56,9 @@ pttl google.com
 :books: DATA: Similar al primer ejemplo, pero usando un nombre de dominio 
 (google.com en este caso).
 
-## :busstop: Ejecutar el script sin argumentos (para ver el modo de uso):
+## :busstop: Ayuda 
+
+Ejecutar el script sin argumentos (para ver el modo de uso):
 
 ```bash
 pttl
