@@ -55,7 +55,7 @@ pttl google.com
 :books: DATA: Similar al primer ejemplo, pero usando un nombre de dominio 
 (google.com en este caso).
 
-:busstop: Ejecutar el script sin argumentos (para ver el modo de uso):
+## :busstop: Ejecutar el script sin argumentos (para ver el modo de uso):
 
 ```bash
 pttl
