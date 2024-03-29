@@ -13,15 +13,15 @@ cd /opt
 sudo rm -rf Ping-TTL
 sudo git clone https://github.com/JennValentine/Ping-TTL
 sudo chmod +x Ping-TTL/*
-cd Ping-TTL
-ls -lthas
+cd
 ```
 
 ## :book: Acceso directo
 ```bash
 cd
-echo "cd /opt/Ping-TTL && sudo ./pttl.sh" > pttl
-sudo chmod +x pttl
+cd /opt/Ping-TTL
+sudo cp pttl.sh pttl_$RANDOM.sh
+sudo cp pttl.sh pttl
 sudo rm -rf /usr/local/bin/pttl
 sudo mv pttl /usr/local/bin/
 cd
@@ -30,9 +30,8 @@ cd
 ## :book: Acceso directo (En caso de error)
 ```bash
 cd
-cd /opt/Ping-TTL
-sudo cp pttl.sh pttl_$RANDOM.sh
-sudo cp pttl.sh pttl
+echo "cd /opt/Ping-TTL && sudo ./pttl.sh" > pttl
+sudo chmod +x pttl
 sudo rm -rf /usr/local/bin/pttl
 sudo mv pttl /usr/local/bin/
 cd
