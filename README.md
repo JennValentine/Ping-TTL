@@ -2,7 +2,7 @@
 
 # Ping-TTL
 
-## :bar_chart: Descripción
+## :information_source: Descripción
 Este script Bash se encarga de realizar un ping a un host proporcionado 
 como argumento y extraer información sobre el sistema operativo del 
 host basándose en el valor de TTL (Time To Live) del resultado del ping. 
