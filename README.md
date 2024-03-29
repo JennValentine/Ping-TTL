@@ -28,6 +28,8 @@ cd
 
 ## :book: Acceso directo (En caso de error)
 ```bash
+cd
+cd /opt/Ping-TTL
 sudo cp pttl.sh pttl_$RANDOM.sh
 sudo cp pttl.sh pttl
 sudo rm -rf /usr/local/bin/pttl
@@ -42,7 +44,7 @@ Ejecutar el script con una dirección IP:
 ```bash
 pttl 8.8.8.8
 ```
-Esto enviará un paquete de ping a la dirección IP 8.8.8.8 y tratará de 
+:books: DATA: Esto enviará un paquete de ping a la dirección IP 8.8.8.8 y tratará de 
 determinar el sistema operativo basándose en el valor de TTL.
 
 Ejecutar el script con un nombre de dominio:
@@ -50,10 +52,10 @@ Ejecutar el script con un nombre de dominio:
 ```bash
 pttl google.com
 ```
-Similar al primer ejemplo, pero usando un nombre de dominio 
+:books: DATA: Similar al primer ejemplo, pero usando un nombre de dominio 
 (google.com en este caso).
 
-Ejecutar el script sin argumentos (para ver el modo de uso):
+:busstop: Ejecutar el script sin argumentos (para ver el modo de uso):
 
 ```bash
 pttl
