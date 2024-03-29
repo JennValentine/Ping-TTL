@@ -13,8 +13,6 @@ cd /opt
 sudo rm -rf Ping-TTL
 sudo git clone https://github.com/JennValentine/Ping-TTL
 sudo chmod +x Ping-TTL/*
-ls -lthas
-cd
 ```
 
 ## :book: Acceso directo
@@ -53,9 +51,9 @@ Ejecutar el script sin argumentos (para ver el modo de uso):
 ```bash
 pttl
 ```
-Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
+:books: DATA: Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
 
-:books: DATA: Este script es una herramienta simple que proporciona una estimación 
+:bookmark_tabs: Este script es una herramienta simple que proporciona una estimación 
 del sistema operativo basándose en el TTL del ping. Ten en cuenta que 
 esta estimación puede no ser precisa en todos los casos, ya que el valor 
 de TTL puede variar y no garantiza la identificación precisa del sistema 
