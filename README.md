@@ -19,10 +19,9 @@ ls -lthas
 
 ## :book: Acceso directo
 ```bash
-cd
 cd /opt/Ping-TTL
 sudo cp pttl.sh pttl_$RANDOM.sh
-sudo cp pttl.sh pttl
+sudo mv pttl.sh pttl
 sudo rm -rf /usr/local/bin/pttl
 sudo mv pttl /usr/local/bin/
 cd
