@@ -1,6 +1,6 @@
 #!/bin/bash
 #====================================================
-#   SCRIPT:                   WEBSHELL SCANNER
+#   SCRIPT:                   PING TTL
 #   DESARROLLADO POR:         JENN VALENTINE 
 #   FECHA DE ACTUALIZACIÃ“N:  16-03-2024 
 #   CONTACTO POR TELEGRAMA:   https://t.me/JennValentine
