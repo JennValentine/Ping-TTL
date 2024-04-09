@@ -1,4 +1,4 @@
-﻿![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/Ping-TTL.jpg)
+﻿![logo](https://edteam-media.s3.amazonaws.com/blogs/big/2ab53939-9b50-47dd-b56e-38d4ba3cc0f0.png)
 
 # Ping-TTL
 
@@ -34,6 +34,7 @@ Ejecutar el script con una dirección IP:
 ```bash
 pttl 8.8.8.8
 ```
+![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-8_8_8_8.jpg)
 :books: DATA: Esto enviará un paquete de ping a la dirección IP 8.8.8.8 y tratará de 
 determinar el sistema operativo basándose en el valor de TTL.
 
@@ -42,6 +43,7 @@ Ejecutar el script con un nombre de dominio:
 ```bash
 pttl google.com
 ```
+![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-google_com.jpg)
 :books: DATA: Similar al primer ejemplo, pero usando un nombre de dominio 
 (google.com en este caso).
 
@@ -52,6 +54,7 @@ Ejecutar el script sin argumentos (para ver el modo de uso):
 ```bash
 pttl
 ```
+![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-help.jpg)
 :books: DATA: Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
 
 :bookmark_tabs: Este script es una herramienta simple que proporciona una estimación 
