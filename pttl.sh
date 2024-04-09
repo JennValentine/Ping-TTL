@@ -1,4 +1,31 @@
 #!/bin/bash
+#====================================================
+#   SCRIPT:                   WEBSHELL SCANNER
+#   DESARROLLADO POR:         JENN VALENTINE 
+#   FECHA DE ACTUALIZACIÃ“N:  16-03-2024 
+#   CONTACTO POR TELEGRAMA:   https://t.me/JennValentine
+#   GITHUB OFICIAL:           https://github.com/JennValentine/Ping-TTL
+#====================================================
+
+# Paleta de colores
+reset="\033[0m"       # Restablecer todos los estilos y colores
+
+# Colores de texto
+black="\033[0;30m"     # Negro
+red="\033[0;31m"       # Rojo
+green="\033[0;32m"     # Verde
+yellow="\033[0;33m"    # Amarillo
+blue="\033[0;34m"      # Azul
+magenta="\033[0;35m"   # Magenta
+cyan="\033[0;36m"      # Cian
+white="\033[0;37m"     # Blanco
+
+checkmark="${green}[++]${reset}"
+error="${red}[--]${reset}"
+info="${yellow}[**]${reset}"
+process="${magenta}[>>]${reset}"
+
+barra="${blue}|--------------------------------------------|${reset}"
 
 # Obtiene el valor de TTL del resultado de ping al host en $1
 ttl=$(timeout 4 bash -c "ping -c1 $1 | grep -oP 'ttl=\d{1,3}' | cut -d '=' -f 2" 2>/dev/null)
