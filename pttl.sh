@@ -20,12 +20,14 @@ magenta="\033[0;35m"   # Magenta
 cyan="\033[0;36m"      # Cian
 white="\033[0;37m"     # Blanco
 
+# Iconos
 checkmark="${green}[++]${reset}"
 error="${red}[--]${reset}"
 info="${yellow}[**]${reset}"
 process="${magenta}[>>]${reset}"
 indicator="${red}==>${reset}"
 
+# Barra de separación
 barra="${blue}|--------------------------------------------|${reset}"
 
 # Obtiene el valor de TTL del resultado de ping al host en $1
@@ -38,9 +40,9 @@ function tipe_ttl ()
     ttl=$2
     if [ $ttl -le 64 -a $ttl -ge 1 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} Host:     $ip"
-        echo -e "\t${indicator} TTL:      $ttl"
-        echo -e "\t${indicator} OS:       ${yellow}Possibly Linux System"
+        echo -e "\t${indicator} ${green}Host:     ${white}$ip"
+        echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
+        echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Linux System"
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 65 -a $ttl -le 128 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
