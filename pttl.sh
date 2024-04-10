@@ -24,6 +24,7 @@ checkmark="${green}[++]${reset}"
 error="${red}[--]${reset}"
 info="${yellow}[**]${reset}"
 process="${magenta}[>>]${reset}"
+indicator="${red}==>${reset}"
 
 barra="${blue}|--------------------------------------------|${reset}"
 
@@ -37,31 +38,31 @@ function tipe_ttl ()
     ttl=$2
     if [ $ttl -le 64 -a $ttl -ge 1 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${green}==> Host:     $ip"
-        echo -e "\t${green}==> TTL:      $ttl"
-        echo -e "\t${green}==> OS:       ${yellow}Possibly Linux System"
+        echo -e "\t${indicator} Host:     $ip"
+        echo -e "\t${indicator} TTL:      $ttl"
+        echo -e "\t${indicator} OS:       ${yellow}Possibly Linux System"
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 65 -a $ttl -le 128 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${green}==> Host:     $ip"
-        echo -e "\t${green}==> TTL:      $ttl"
-        echo -e "\t${green}==> OS:       ${yellow}Possibly Windows System"
+        echo -e "\t${indicator} ${green}Host:     $ip"
+        echo -e "\t${indicator} ${green}TTL:      $ttl"
+        echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Windows System"
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 129 -a $ttl -le 255 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${green}==> Host:     $ip"
-        echo -e "\t${green}==> TTL:      $ttl"
-        echo -e "\t${green}==> OS:       ${yellow}Possibly macOS System"
+        echo -e "\t${indicator} ${green}Host:     $ip"
+        echo -e "\t${indicator} ${green}TTL:      $ttl"
+        echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly macOS System"
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 256 -a $ttl -le 512 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${green}==> Host:     $ip"
-        echo -e "\t${green}==> TTL:      $ttl"
-        echo -e "\t${green}==> OS:       ${yellow}Possibly Cisco IOS"
+        echo -e "\t${indicator} ${green}Host:     $ip"
+        echo -e "\t${indicator} ${green}TTL:      $ttl"
+        echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Cisco IOS"
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     else
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${green}==> Unknown System\n"
+        echo -e "\t${indicator} Unknown System\n"
         echo -e "\n${info} ${green}Information not available"
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     fi
