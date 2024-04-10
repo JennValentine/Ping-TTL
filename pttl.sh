@@ -44,20 +44,20 @@ function tipe_ttl ()
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 65 -a $ttl -le 128 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} ${green}Host:     $ip"
-        echo -e "\t${indicator} ${green}TTL:      $ttl"
+        echo -e "\t${indicator} ${green}Host:     ${white}$ip"
+        echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Windows System"
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 129 -a $ttl -le 255 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} ${green}Host:     $ip"
-        echo -e "\t${indicator} ${green}TTL:      $ttl"
+        echo -e "\t${indicator} ${green}Host:     ${white}$ip"
+        echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly macOS System"
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 256 -a $ttl -le 512 ]; then
         echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} ${green}Host:     $ip"
-        echo -e "\t${indicator} ${green}TTL:      $ttl"
+        echo -e "\t${indicator} ${green}Host:     ${white}$ip"
+        echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Cisco IOS"
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     else
