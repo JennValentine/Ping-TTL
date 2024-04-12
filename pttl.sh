@@ -2,7 +2,7 @@
 #====================================================
 #   SCRIPT:                   PING TTL
 #   DESARROLLADO POR:         JENN VALENTINE 
-#   FECHA DE ACTUALIZACIÃ“N:  16-03-2024 
+#   FECHA DE ACTUALIZACIÓN:   16-03-2024 
 #   CONTACTO POR TELEGRAMA:   https://t.me/JennValentine
 #   GITHUB OFICIAL:           https://github.com/JennValentine/Ping-TTL
 #====================================================
@@ -39,30 +39,35 @@ function tipe_ttl ()
     ip=$1
     ttl=$2
     if [ $ttl -le 64 -a $ttl -ge 1 ]; then
+        # Sistema Linux
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} ${green}Host:     ${white}$ip"
         echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Linux System"
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 65 -a $ttl -le 128 ]; then
+        # Sistema Windows
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} ${green}Host:     ${white}$ip"
         echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Windows System"
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
-    elif [ $ttl -ge 129 -a $ttl -le 255 ]; then
+    elif [ $ttl -ge 129 -a $ttl -le 191 ]; then
+        # Posiblemente sistema macOS
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} ${green}Host:     ${white}$ip"
         echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly macOS System"
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
-    elif [ $ttl -ge 256 -a $ttl -le 512 ]; then
+    elif [ $ttl -ge 192 -a $ttl -le 254 ]; then
+        # Posiblemente Cisco IOS
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} ${green}Host:     ${white}$ip"
         echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Cisco IOS"
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     else
+        # Sistema desconocido
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} Unknown System\n"
         echo -e "\n${info} ${green}Information not available"
@@ -75,13 +80,16 @@ function tipe_ttl ()
 if [ $# -eq 1 ]; then
     # Verificar si el comando ping tuvo éxito y el valor de TTL es válido
     if [ $? -eq 0 -a $ttl -le 512 -a $ttl -ge 1 ] 2>/dev/null; then
+        # Llamar a la función tipe_ttl() para determinar el sistema operativo
         tipe_ttl $1 $ttl
     fi
+    # Mostrar mensaje de error si no se proporcionó un único argumento o el ping falló
     echo -e "\n${error} ERROR, coloque un parametro valido"
     echo -e "     o verifique si el host esta activo!"
     echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     exit 1
 else
+    # Mostrar el modo de uso si no se proporcionó un único argumento
     echo -e "\n${info} ${green} EL modo de uso es:\n"
     echo -e "\t${white} Ejemplo con IP         ${green}$0 8.8.8.8    | ${green}pttl 8.8.8.8"
     echo -e "\t${white} Ejemplo con dominio    ${green}$0 google.com | ${green}pttl google.com"
