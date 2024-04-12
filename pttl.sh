@@ -40,35 +40,35 @@ function tipe_ttl ()
     ttl=$2
     if [ $ttl -le 64 -a $ttl -ge 1 ]; then
         # Sistema Linux
-        # TTL de 1 a 64: Generalmente asociado con sistemas Linux y sistemas basados en Unix.
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} ${green}Host:     ${white}$ip"
         echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Linux System"
+        echo -e "\n${white}TTL de 1 a 64: Generalmente asociado con sistemas Linux y sistemas basados en Unix."
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 65 -a $ttl -le 128 ]; then
         # Sistema Windows
-        #TTL de 65 a 128: Suelen indicar sistemas Windows.
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} ${green}Host:     ${white}$ip"
         echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Windows System"
+        echo -e "\n${white}TTL de 65 a 128: Suelen indicar sistemas Windows."
         echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 129 -a $ttl -le 191 ]; then
         # Posiblemente sistema macOS
-        # TTL de 129 a 191: Puede estar asociado con sistemas macOS, pero ten en cuenta que macOS y sistemas Unix pueden tener TTL en el rango de 1 a 64, así que esto es más una suposición.
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} ${green}Host:     ${white}$ip"
         echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly macOS System"
+        echo -e "\n${white}TTL de 129 a 191: Puede estar asociado con sistemas macOS, pero ten en cuenta que macOS\n y sistemas Unix pueden tener TTL en el rango de 1 a 64, así que esto es más una suposición."
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     elif [ $ttl -ge 192 -a $ttl -le 254 ]; then
         # Posiblemente Cisco IOS
-        TTL de 192 a 254: Puede estar asociado con dispositivos de red como routers y switches Cisco IOS.
         echo -e "\n${info} ${green} Extracting information...\n"
         echo -e "\t${indicator} ${green}Host:     ${white}$ip"
         echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
         echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Cisco IOS"
+        echo -e "\n${white}TTL de 192 a 254: Puede estar asociado con dispositivos de red como routers y switches Cisco IOS."
         echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     else
         # Sistema desconocido
