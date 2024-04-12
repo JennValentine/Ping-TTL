@@ -67,9 +67,10 @@ if [ $# -eq 1 ]; then
     echo -e "\n${error} ERROR: Invalid parameter or unable to reach the host!"
 else
     # Mostrar el modo de uso si no se proporcionó un único argumento
-    echo -e "\n${info} ${green} USAGE:\n"
-    echo -e "\t${white} Example with IP:       ${green}$0 8.8.8.8    | ${green}pttl 8.8.8.8"
-    echo -e "\t${white} Example with domain:   ${green}$0 google.com | ${green}pttl google.com"
+    echo -e "\n${green}Usage:${reset}\n"
+    echo -e "${white}  Example with IP:${reset}\t\t${green}pttl 8.8.8.8${reset}"
+    echo -e "${white}  Example with domain:${reset}\t\t${green}pttl google.com${reset}"
 fi
+
 
 # Fin del script
