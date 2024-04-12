@@ -30,74 +30,46 @@ indicator="${red}==>${reset}"
 # Barra de separación
 barra="${blue}|--------------------------------------------|${reset}"
 
-# Obtiene el valor de TTL del resultado de ping al host en $1
-ttl=$(timeout 4 bash -c "ping -c1 $1 | grep -oP 'ttl=\d{1,3}' | cut -d '=' -f 2" 2>/dev/null)
-
 # Función para determinar el sistema operativo en función del valor de TTL
-function tipe_ttl ()
-{
+tipe_ttl() {
     ip=$1
     ttl=$2
     if [ $ttl -le 64 -a $ttl -ge 1 ]; then
-        # Sistema Linux
-        echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} ${green}Host:     ${white}$ip"
-        echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
-        echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Linux System"
-        echo -e "\n${white}TTL de 1 a 64: Generalmente asociado con sistemas Linux y sistemas basados en Unix."
-        echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
+        os="Possibly Linux/Unix System"
     elif [ $ttl -ge 65 -a $ttl -le 128 ]; then
-        # Sistema Windows
-        echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} ${green}Host:     ${white}$ip"
-        echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
-        echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Windows System"
-        echo -e "\n${white}TTL de 65 a 128: Suelen indicar sistemas Windows."
-        echo -e "\n${yellow}${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
+        os="Possibly Windows System"
     elif [ $ttl -ge 129 -a $ttl -le 191 ]; then
-        # Posiblemente sistema macOS
-        echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} ${green}Host:     ${white}$ip"
-        echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
-        echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly macOS System"
-        echo -e "\n${white}TTL de 129 a 191: Puede estar asociado con sistemas macOS, pero ten en cuenta que macOS\n y sistemas Unix pueden tener TTL en el rango de 1 a 64, así que esto es más una suposición."
-        echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
+        os="Possibly macOS System"
     elif [ $ttl -ge 192 -a $ttl -le 254 ]; then
-        # Posiblemente Cisco IOS
-        echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} ${green}Host:     ${white}$ip"
-        echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
-        echo -e "\t${indicator} ${green}OS:       ${yellow}Possibly Cisco IOS"
-        echo -e "\n${white}TTL de 192 a 254: Puede estar asociado con dispositivos de red como routers y switches Cisco IOS."
-        echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
+        os="Possibly Cisco IOS"
     else
-        # Sistema desconocido
-        echo -e "\n${info} ${green} Extracting information...\n"
-        echo -e "\t${indicator} Unknown System\n"
-        echo -e "\n${info} ${green}Information not available"
-        echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
+        os="Unknown System"
     fi
+    echo -e "\n${info} ${green} Extracting information...\n"
+    echo -e "\t${indicator} ${green}Host:     ${white}$ip"
+    echo -e "\t${indicator} ${green}TTL:      ${white}$ttl"
+    echo -e "\t${indicator} ${green}OS:       ${yellow}$os"
+    echo -e "\n${white}TTL values: 1-64 (Linux/Unix), 65-128 (Windows), 129-191 (macOS), 192-254 (Cisco IOS)."
+    echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     exit 0
 }
 
-# Comprobar si se proporcionó un único argumento
+# Verificar si se proporcionó un único argumento
 if [ $# -eq 1 ]; then
+    # Obtener el valor de TTL del resultado del ping al host
+    ttl=$(timeout 4 bash -c "ping -c1 $1 | grep -oP 'ttl=\d{1,3}' | cut -d '=' -f 2" 2>/dev/null)
     # Verificar si el comando ping tuvo éxito y el valor de TTL es válido
-    if [ $? -eq 0 -a $ttl -le 512 -a $ttl -ge 1 ] 2>/dev/null; then
+    if [ $? -eq 0 ] && [ $ttl -le 512 ] && [ $ttl -ge 1 ] 2>/dev/null; then
         # Llamar a la función tipe_ttl() para determinar el sistema operativo
         tipe_ttl $1 $ttl
     fi
-    # Mostrar mensaje de error si no se proporcionó un único argumento o el ping falló
-    echo -e "\n${error} ERROR, coloque un parametro valido"
-    echo -e "     o verifique si el host esta activo!"
-    echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
-    exit 1
+    # Mostrar mensaje de error si el ping falló o el TTL es inválido
+    echo -e "\n${error} ERROR: Invalid parameter or unable to reach the host!"
 else
     # Mostrar el modo de uso si no se proporcionó un único argumento
-    echo -e "\n${info} ${green} EL modo de uso es:\n"
-    echo -e "\t${white} Ejemplo con IP         ${green}$0 8.8.8.8    | ${green}pttl 8.8.8.8"
-    echo -e "\t${white} Ejemplo con dominio    ${green}$0 google.com | ${green}pttl google.com"
-    echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
+    echo -e "\n${info} ${green} USAGE:\n"
+    echo -e "\t${white} Example with IP:       ${green}$0 8.8.8.8    | ${green}pttl 8.8.8.8"
+    echo -e "\t${white} Example with domain:   ${green}$0 google.com | ${green}pttl google.com"
 fi
 
 # Fin del script
