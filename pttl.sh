@@ -77,8 +77,8 @@ if [ $# -eq 1 ]; then
     if [ $? -eq 0 -a $ttl -le 512 -a $ttl -ge 1 ] 2>/dev/null; then
         tipe_ttl $1 $ttl
     fi
-    echo -e "\n${error} ERROR, coloque un parámetro válido"
-    echo -e "     o verifique si el host está activo!"
+    echo -e "\n${error} ERROR, coloque un parametro valido"
+    echo -e "     o verifique si el host esta activo!"
     echo -e "\n${info} ${white}GITHUB OFICIAL: ${green}https://github.com/JennValentine/Ping-TTL\n"
     exit 1
 else
