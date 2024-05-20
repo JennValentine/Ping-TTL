@@ -7,7 +7,7 @@ Este script Bash se encarga de realizar un ping a un host proporcionado
 como argumento y extraer información sobre el sistema operativo del 
 host basándose en el valor de TTL (Time To Live) del resultado del ping. 
 
-## :arrow_down: Instalacion
+## :computer: Instalación
 ```bash
 cd /opt
 sudo rm -rf Ping-TTL
@@ -17,7 +17,7 @@ cd Ping-TTL
 ls -lthas
 ```
 
-## :book: Acceso directo
+## :key: Acceso Directo
 ```bash
 cd /opt/Ping-TTL
 sudo cp pttl.sh pttl_$RANDOM.sh
@@ -27,7 +27,7 @@ sudo mv pttl /usr/local/bin/
 cd
 ```
 
-## :hammer: Modo de Uso
+## :rocket: Modo de Uso
 
 Ejecutar el script con una dirección IP:
 
@@ -35,7 +35,7 @@ Ejecutar el script con una dirección IP:
 pttl 8.8.8.8
 ```
 ![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-8_8_8_8.jpg)
-:books: DATA: Esto enviará un paquete de ping a la dirección IP 8.8.8.8 y tratará de 
+:memo: Notas: Esto enviará un paquete de ping a la dirección IP 8.8.8.8 y tratará de 
 determinar el sistema operativo basándose en el valor de TTL.
 
 Ejecutar el script con un nombre de dominio:
@@ -55,7 +55,7 @@ Ejecutar el script sin argumentos (para ver el modo de uso):
 pttl
 ```
 ![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-help.jpg)
-:books: DATA: Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
+:memo: Notas: Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
 
 :bookmark_tabs: Este script es una herramienta simple que proporciona una estimación 
 del sistema operativo basándose en el TTL del ping. Ten en cuenta que 
@@ -63,5 +63,5 @@ esta estimación puede no ser precisa en todos los casos, ya que el valor
 de TTL puede variar y no garantiza la identificación precisa del sistema 
 operativo.
 
-## :octocat: Créditos
-1. [Jenn Valentine](https://t.me/JennValentine) - Update Contributor
+## :email: Contacto
+* :busts_in_silhouette: [Jenn Valentine](https://t.me/JennValentine) - Update Contributor :octocat:
