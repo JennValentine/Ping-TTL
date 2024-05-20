@@ -44,10 +44,10 @@ Ejecutar el script con un nombre de dominio:
 pttl google.com
 ```
 ![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-google_com.jpg)
-:books: DATA: Similar al primer ejemplo, pero usando un nombre de dominio 
+:memo: Notas: Similar al primer ejemplo, pero usando un nombre de dominio 
 (google.com en este caso).
 
-## :busstop: Ayuda 
+## :newspaper: Ayuda 
 
 Ejecutar el script sin argumentos (para ver el modo de uso):
 
