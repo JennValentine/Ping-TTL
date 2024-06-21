@@ -50,7 +50,7 @@ pttl google.com
 
 ## :bulb: Sugerencia  
 
-Ejecutar el script sin argumentos (para ver el modo de uso):
+Ejecutar el script sin argumentos para ver el modo de uso:
 
 ```bash
 pttl
