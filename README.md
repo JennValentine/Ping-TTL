@@ -24,6 +24,7 @@ sudo cp pttl.sh pttl_$RANDOM.sh
 sudo mv pttl.sh pttl
 sudo rm -rf /usr/local/bin/pttl
 sudo mv pttl /usr/local/bin/
+ls -lthas
 cd
 ```
 
