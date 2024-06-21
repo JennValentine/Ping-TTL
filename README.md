@@ -47,7 +47,7 @@ pttl google.com
 :memo: Notas: Similar al primer ejemplo, pero usando un nombre de dominio 
 (google.com en este caso).
 
-## :emergency: Ayuda 
+## Sugerencia :bulb: 
 
 Ejecutar el script sin argumentos (para ver el modo de uso):
 
