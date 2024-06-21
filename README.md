@@ -64,4 +64,4 @@ de TTL puede variar y no garantiza la identificación precisa del sistema
 operativo.
 
 ## :email: Contacto
-* :busts_in_silhouette: [Jenn Valentine](https://t.me/JennValentine) - Update Contributor :octocat:
+* :busts_in_silhouette: [Jenn Valentine](https://t.me/JennValentine) - Contribución :octocat:
