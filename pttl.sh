@@ -2,7 +2,7 @@
 #====================================================
 #   SCRIPT:                   PING TTL
 #   DESARROLLADO POR:         JENN VALENTINE 
-#   FECHA DE ACTUALIZACIÓN:   16-03-2024 
+#   FECHA DE ACTUALIZACIÃ“N:   16-03-2024 
 #   CONTACTO POR TELEGRAMA:   https://t.me/JennValentine
 #   GITHUB OFICIAL:           https://github.com/JennValentine/Ping-TTL
 #====================================================
@@ -43,11 +43,11 @@ info="${yellow}[**]${reset}"
 process="${magenta}[>>]${reset}"
 indicator="${red}==>${reset}"
 
-# Barra de separación
+# Barra de separaciÃ³n
 barra="${blue}|--------------------------------------------|${reset}"
 bar="${yellow}--------------------------------------------${reset}"
 
-# Función para determinar el sistema operativo en función del valor de TTL
+# FunciÃ³n para determinar el sistema operativo en funciÃ³n del valor de TTL
 tipe_ttl() {
     ip=$1
     ttl=$2
@@ -62,8 +62,8 @@ tipe_ttl() {
     else
         os="Sistema desconocido"
     fi
-    echo -e "\n${info} ${green} Extrayendo información...\n"
-    echo -e "\t${indicator} ${green}Dirección:              ${white}$ip"
+    echo -e "\n${info} ${green} Extrayendo informaciÃ³n...\n"
+    echo -e "\t${indicator} ${green}DirecciÃ³n:              ${white}$ip"
     echo -e "\t${indicator} ${green}Tiempo de Vida:         ${white}$ttl"
     echo -e "\t${indicator} ${green}Sistema Operativo:      ${yellow}$os"
     echo -e "\n${white}Valores de TTL: 1-64 (Linux/Unix), 65-128 (Windows), 129-191 (macOS), 192-254 (Cisco IOS)."
@@ -72,19 +72,19 @@ tipe_ttl() {
     exit 0
 }
 
-# Verificar si se proporcionó un único argumento
+# Verificar si se proporcionÃ³ un Ãºnico argumento
 if [ $# -eq 1 ]; then
     # Obtener el valor de TTL del resultado del ping al host
     ttl=$(timeout 4 bash -c "ping -c1 $1 | grep -oP 'ttl=\d{1,3}' | cut -d '=' -f 2" 2>/dev/null)
-    # Verificar si el comando ping tuvo éxito y el valor de TTL es válido
+    # Verificar si el comando ping tuvo Ã©xito y el valor de TTL es vÃ¡lido
     if [ $? -eq 0 ] && [ "$ttl" -le 255 ] && [ "$ttl" -ge 1 ] 2>/dev/null; then
-        # Llamar a la función tipe_ttl() para determinar el sistema operativo
+        # Llamar a la funciÃ³n tipe_ttl() para determinar el sistema operativo
         tipe_ttl $1 $ttl
     fi
-    # Mostrar mensaje de error si el ping falló o el TTL es inválido
-    echo -e "\n${error} ERROR: ¡Parámetro inválido o no se puede alcanzar el host!"
+    # Mostrar mensaje de error si el ping fallÃ³ o el TTL es invÃ¡lido
+    echo -e "\n${error} ERROR: Â¡ParÃ¡metro invÃ¡lido o no se puede alcanzar el host!"
 else
-    # Mostrar el modo de uso si no se proporcionó un único argumento
+    # Mostrar el modo de uso si no se proporcionÃ³ un Ãºnico argumento
     echo -e "\n${green}PING TTL"
     echo -e "\n${green}Uso:${reset}\n"
     echo -e "${white}  Ejemplo con IP:${reset}\t\t${green}pttl 8.8.8.8"
