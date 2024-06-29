@@ -36,11 +36,12 @@ bg_magenta="\033[0;45m"   # Fondo Magenta
 bg_cyan="\033[0;46m"      # Fondo Cian
 bg_white="\033[0;47m"     # Fondo Blanco
 
-# Iconos
-checkmark="${green}[++]${reset}"
-error="${red}[--]${reset}"
-info="${yellow}[**]${reset}"
-process="${magenta}[>>]${reset}"
+# Iconos v3
+checkmark="${white}[${green}++${white}]${green}"
+error="${white}[${red}--${white}]${reset}"
+info="${white}[${yellow}**${white}]${white}"
+unknown="${white}[${blue}!!${white}]${reset}"
+process="${white}[${magenta}>>${white}]${magenta}"
 indicator="${red}==>${reset}"
 
 # Barra de separación
