@@ -29,7 +29,7 @@ cd
 ```
 ## :computer: Instalación en una Línea
 ```bash
-sudo wget https://raw.githubusercontent.com/JennValentine/Ping-TTL/main/install.sh && sudo chmod +x install.sh* && sudo ./install.sh*
+sudo wget https://raw.githubusercontent.com/JennValentine/Ping-TTL/main/install.sh && sudo chmod +x install.sh* && sudo ./install.sh
 ```
 
 ## :rocket: Modo de Uso
