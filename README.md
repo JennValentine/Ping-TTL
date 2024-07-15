@@ -27,9 +27,10 @@ sudo mv pttl /usr/local/bin/
 ls -lthas
 cd
 ```
+
 ## :computer: Instalación en una Línea
 ```bash
-wget https://raw.githubusercontent.com/JennValentine/Ping-TTL/main/install.sh && sudo chmod +x install.sh && sudo ./install.sh
+wget https://raw.githubusercontent.com/JennValentine/Ping-TTL/main/install.sh; sudo chmod +x install.sh; sudo ./install.sh
 ```
 
 ## :rocket: Modo de Uso
