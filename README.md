@@ -1,4 +1,4 @@
-﻿![logo](https://edteam-media.s3.amazonaws.com/blogs/big/2ab53939-9b50-47dd-b56e-38d4ba3cc0f0.png)
+﻿![logo](https://i.pinimg.com/originals/dc/a3/9a/dca39ae9f56ebf107c2582911990b19a.gif)
 
 # Ping-TTL :octocat: 
 
