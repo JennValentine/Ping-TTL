@@ -74,6 +74,8 @@ pttl
 - Sistema Operativo: Linux/Unix
 - Dependencias: Bash
 
+## :open_file_folder: Estructura del Repositorio
+
 Ping-TTL/
 │
 ├── Imagenes/            # Carpeta que contiene imágenes de ejemplos y del script en ejecución.
@@ -88,6 +90,7 @@ Ping-TTL/
 ├── install.sh           # Script de instalación automática.
 │
 └── pttl.sh              # Script principal que realiza el ping y estima el SO.
+
 
 
 ## :email: Contacto
