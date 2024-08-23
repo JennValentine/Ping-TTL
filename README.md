@@ -1,11 +1,14 @@
 ﻿![logo](https://edteam-media.s3.amazonaws.com/blogs/big/2ab53939-9b50-47dd-b56e-38d4ba3cc0f0.png)
 
-# Ping-TTL
+# Ping-TTL :octocat: 
 
 ## :information_source: Descripción
-Este script Bash se encarga de realizar un ping a un host proporcionado 
-como argumento y extraer información sobre el sistema operativo del 
-host basándose en el valor de TTL (Time To Live) del resultado del ping. 
+Este script Bash realiza un ping a un host proporcionado como argumento y extrae 
+información sobre su sistema operativo basándose en el valor de TTL (Time To Live) 
+del ping. Aunque es una herramienta simple, ofrece una estimación del sistema operativo 
+del host. Es importante tener en cuenta que la precisión de esta identificación 
+puede variar, ya que el TTL no garantiza una identificación 
+exacta del sistema operativo.
 
 ## :computer: Instalación
 ```bash
@@ -35,23 +38,20 @@ wget https://raw.githubusercontent.com/JennValentine/Ping-TTL/main/install.sh; s
 
 ## :rocket: Modo de Uso
 
-Ejecutar el script con una dirección IP:
+Ejecute el script escribiendo una dirección `IP` o `dominio` en tu terminal y presionando Enter.
 
 ```bash
 pttl 8.8.8.8
 ```
-![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-8_8_8_8.jpg)
-:memo: Notas: Esto enviará un paquete de ping a la dirección IP 8.8.8.8 y tratará de 
-determinar el sistema operativo basándose en el valor de TTL.
 
-Ejecutar el script con un nombre de dominio:
+![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-8_8_8_8.jpg)
+:memo: Esto enviará un paquete de ping a la dirección IP 8.8.8.8 y tratará de determinar el sistema operativo basándose en el valor de TTL.
 
 ```bash
 pttl google.com
 ```
 ![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-google_com.jpg)
-:memo: Notas: Similar al primer ejemplo, pero usando un nombre de dominio 
-(google.com en este caso).
+:memo: Similar al primer ejemplo, pero usando un nombre de dominio (google.com en este caso).
 
 ## :bulb: Sugerencia  
 
@@ -61,13 +61,34 @@ Ejecutar el script sin argumentos para ver el modo de uso:
 pttl
 ```
 ![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-help.jpg)
-:memo: Notas: Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
+:memo: Muestra un mensaje explicando cómo usar el script, incluyendo ejemplos.
 
-:bookmark_tabs: Este script es una herramienta simple que proporciona una estimación 
-del sistema operativo basándose en el TTL del ping. Ten en cuenta que 
-esta estimación puede no ser precisa en todos los casos, ya que el valor 
-de TTL puede variar y no garantiza la identificación precisa del sistema 
-operativo.
+## :star2: Características 
+
+- Automatización: Simplifica el proceso de identificación del sistema operativo basado en el TTL.
+- Simplicidad: Ofrece una interfaz fácil de usar con comandos sencillos.
+- Flexibilidad: Soporta tanto direcciones IP como nombres de dominio.
+
+## :hammer_and_wrench: Requisitos 
+
+- Sistema Operativo: Linux/Unix
+- Dependencias: Bash
+
+Ping-TTL/
+│
+├── Imagenes/            # Carpeta que contiene imágenes de ejemplos y del script en ejecución.
+│   ├── pttl-8_8_8_8.jpg
+│   ├── pttl-google_com.jpg
+│   └── pttl-help.jpg
+│
+├── LICENSE              # Licencia MIT para el proyecto.
+│
+├── README.md            # Archivo README con la documentación del proyecto.
+│
+├── install.sh           # Script de instalación automática.
+│
+└── pttl.sh              # Script principal que realiza el ping y estima el SO.
+
 
 ## :email: Contacto
-* :busts_in_silhouette: [Jenn Valentine](https://t.me/JennValentine) - Contribución :octocat:
+* :busts_in_silhouette: [Jenn Valentine](https://t.me/JennValentine) - Contribución
