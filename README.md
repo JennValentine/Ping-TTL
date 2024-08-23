@@ -76,8 +76,6 @@ pttl
 
 ## :open_file_folder: Estructura del Repositorio
 
-## 📂 Estructura del Repositorio
-
 ```plaintext
 Ping-TTL/
 │
