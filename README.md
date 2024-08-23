@@ -76,6 +76,9 @@ pttl
 
 ## :open_file_folder: Estructura del Repositorio
 
+## 📂 Estructura del Repositorio
+
+```plaintext
 Ping-TTL/
 │
 ├── Imagenes/            # Carpeta que contiene imágenes de ejemplos y del script en ejecución.
@@ -90,8 +93,7 @@ Ping-TTL/
 ├── install.sh           # Script de instalación automática.
 │
 └── pttl.sh              # Script principal que realiza el ping y estima el SO.
-
-
+```
 
 ## :email: Contacto
 * :busts_in_silhouette: [Jenn Valentine](https://t.me/JennValentine) - Contribución
