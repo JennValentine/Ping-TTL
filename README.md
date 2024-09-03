@@ -1,4 +1,4 @@
-﻿![logo](https://i.pinimg.com/originals/dc/a3/9a/dca39ae9f56ebf107c2582911990b19a.gif)
+﻿![logo](https://steamuserimages-a.akamaihd.net/ugc/2431257904741262239/5224F69217562A3C070E381FE3DAC295BCF5C9A8/?imw=1024&imh=575&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)
 
 # Ping-TTL :octocat: 
 
