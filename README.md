@@ -1,4 +1,4 @@
-﻿![logo](https://steamuserimages-a.akamaihd.net/ugc/2431257904741262239/5224F69217562A3C070E381FE3DAC295BCF5C9A8/?imw=1024&imh=575&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)
+﻿![logo](https://img.freepik.com/vector-premium/pelirroja-anime-error-404-pagina-no-encontrada_150972-657.jpg?w=826)
 
 # Ping-TTL :octocat: 
 
