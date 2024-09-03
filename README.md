@@ -53,7 +53,7 @@ pttl google.com
 ![logo](https://github.com/JennValentine/Ping-TTL/blob/main/Imagenes/pttl-google_com.jpg)
 :memo: Similar al primer ejemplo, pero usando un nombre de dominio (google.com en este caso).
 
-## :bulb: Sugerencia  
+## :sos: Ayuda  
 
 Ejecutar el script sin argumentos para ver el modo de uso:
 
